@@ -12,10 +12,11 @@ function counter(selector) {
     let number = parseFloat(DOM.innerText);
 
     const timer = setInterval(function (){
-        showmenumber(number);
+        DOM.innerText =number;
         number--;
         if (number < 0){
             clearInterval(timer);
+            DOM.innerText = 'Baigėsi';
 
         }
     }, 1000);
